@@ -1,0 +1,116 @@
+/* Estilos Gerais */
+body {
+  font-family: 'Press Start 2P', cursive;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Fundo Animado */
+.retro-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+    url('../assets/fundo.gif') center/cover;
+  animation: bg-scroll 60s linear infinite;
+}
+
+@keyframes bg-scroll {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+/* Container do Quiz */
+.quiz-container {
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.8);
+  border: 4px solid #0ff;
+  border-radius: 10px;
+  box-shadow: 0 0 30px #f0f;
+  position: relative;
+}
+
+h1 {
+  text-align: center;
+  color: #0ff;
+  font-size: 24px;
+  text-shadow: 0 0 10px #00f;
+}
+
+.question {
+  margin: 20px 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  background: #222;
+  color: #0ff;
+  border: 2px solid #0ff;
+  border-radius: 8px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+button:hover {
+  background: #0ff;
+  color: #000;
+  transform: scale(1.02);
+}
+
+.feedback {
+  margin-top: 20px;
+  font-size: 14px;
+  min-height: 20px;
+}
+
+.score {
+  font-size: 14px;
+  margin-top: 10px;
+  color: #0f0;
+}
+
+.game-img {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.game-img img {
+  width: 100px;
+  animation: bounce 2s infinite ease-in-out;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+/* Efeito CRT */
+.crt-effect::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    linear-gradient(rgba(18, 16, 16, 0.1) 50%, 
+    rgba(0, 0, 0, 0.25) 50%);
+  background-size: 100% 4px;
+  pointer-events: none;
+  z-index: 1;
+}
