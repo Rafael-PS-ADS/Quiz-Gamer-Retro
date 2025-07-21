@@ -131,14 +131,14 @@ class QuizGame {
       <h1>🎉 Fim de Jogo!</h1>
       <p>Sua pontuação final foi: ${this.score} de ${this.questions.length}</p>
       <div class="game-img">
-        <img src="./assets/mario.gif" alt="Mario Pixel">
+        <img src="./assets/mario.gif" alt="Mario Pixel"  onerror="this.style.display='none'">
       </div>
       <button onclick="location.reload()">Jogar Novamente</button>
     `;
   }
 }
 
-// Seleciona 5 perguntas aleatórias
+
 const randomQuestions = [...allQuestions]
   .sort(() => Math.random() - 0.5)
   .slice(0, 5);
